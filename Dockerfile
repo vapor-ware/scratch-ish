@@ -1,3 +1,3 @@
 FROM scratch
 
-COPY bin/ bin/
+COPY exists bin/exists
