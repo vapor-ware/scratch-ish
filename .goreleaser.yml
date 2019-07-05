@@ -1,0 +1,48 @@
+# For details, see the GoReleaser documentation at http://goreleaser.com
+project_name: scratch-ish
+before:
+  hooks:
+    - go mod download
+builds:
+  -
+    main: ./cmd/exists
+    binary: exists
+    env:
+      - CGO_ENABLED=0
+    ldflags:
+      - -w
+      - -s
+    goos:
+      - linux
+    goarch:
+      - amd64
+    hooks:
+      post: ./post-build.sh
+archives:
+  - format: tar.gz
+checksum:
+  name_template: 'checksums-{{ .Tag }}.txt'
+release:
+  github:
+    owner: vapor-ware
+    name: scratch-ish
+  draft: false
+  prerelease: auto
+  name_template: "{{ .Version }}"
+dockers:
+  -
+    goos: linux
+    goarch: amd64
+    binaries:
+      - exists
+    image_templates:
+      - vaporio/scratch-ish:{{ .Tag }}
+      - vaporio/scratch-ish:latest
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'

@@ -15,4 +15,4 @@
 .idea
 
 # Build artifacts
-bin/
+exists
