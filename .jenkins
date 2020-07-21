@@ -7,6 +7,5 @@ library identifier: 'vapor@golang/skip-opts', retriever: modernSCM(
 golangPipeline([
   "image": "vaporio/scratch-ish",
   "skipLint": true,
-  "skipBuild": true,
   "skipTest": true
 ])
