@@ -5,6 +5,9 @@
 # over a path glob, e.g. dist/*/bin
 base_path="dist/scratch-ish_linux_amd64"
 
+set +x
+ls -al dist
+
 # If the binary doesn't exist, bail out, as GoReleaser should have built it
 # by this point.
 if [[ ! -f ${base_path}/exists ]]; then
