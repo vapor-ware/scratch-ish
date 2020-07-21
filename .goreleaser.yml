@@ -17,8 +17,8 @@ builds:
       - linux
     goarch:
       - amd64
-    hooks:
-      post: ./post-build.sh
+    #hooks:
+    #  post: ./post-build.sh
 archives:
   - format: tar.gz
 checksum:
