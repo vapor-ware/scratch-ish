@@ -3,7 +3,7 @@
 # We are currently only building for linux_amd64, so we only need to
 # look there. If other builds are supported, we should update to iterate
 # over a path glob, e.g. dist/*/bin
-base_path="dist/linux_amd64"
+base_path="dist/scratch-ish_linux_amd64"
 
 # If the binary doesn't exist, bail out, as GoReleaser should have built it
 # by this point.
