@@ -6,11 +6,12 @@
 base_path="dist/scratch-ish_linux_amd64"
 
 set +x
+set +e
 ls -al dist
 
 # If the binary doesn't exist, bail out, as GoReleaser should have built it
 # by this point.
-if [[ ! -f ${base_path}/exists ]]; then
+if [[ ! -f "${base_path}/exists" ]]; then
     echo "binary does not exist, unable to run post-build script"
     exit 1
 fi
