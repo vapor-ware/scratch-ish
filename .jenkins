@@ -10,4 +10,5 @@ golangPipeline([
   "image": "vaporio/scratch-ish",
   "skipLint": true,
   "skipTest": true,
+  "skipSetup": true,
 ])
