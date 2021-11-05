@@ -8,6 +8,9 @@ library identifier: 'vapor@develop', retriever: modernSCM(
 
 golangPipeline([
   "image": "vaporio/scratch-ish",
+  "goVersion": '1.16',
   "skipLint": true,
-  "skipTest": true,
+  "skipUnitTest": true,
+  "skipSetup": true,
+  "skipIntegrationTest": true,
 ])
