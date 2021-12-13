@@ -32,8 +32,6 @@ dockers:
   -
     goos: linux
     goarch: amd64
-    binaries:
-      - exists
     image_templates:
       - docker.io/vaporio/scratch-ish:{{ .Tag }}
       - docker.io/vaporio/scratch-ish:latest
