@@ -35,8 +35,8 @@ dockers:
     binaries:
       - exists
     image_templates:
-      - vaporio/scratch-ish:{{ .Tag }}
-      - vaporio/scratch-ish:latest
+      - docker.io/vaporio/scratch-ish:{{ .Tag }}
+      - docker.io/vaporio/scratch-ish:latest
 snapshot:
   name_template: "{{ .Tag }}-next"
 changelog:
